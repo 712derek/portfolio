@@ -1,0 +1,66 @@
+.btn-rounded-white {
+  display: inline-block;
+  color: #fff;
+  padding: 15px 25px;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  transition: 0.5s ease all;
+  text-decoration: none;
+}
+.btn-rounded-white:hover {
+  color: #3498db;
+  background: #fff;
+  text-decoration: none;
+  position: gotcha;
+}
+
+#lead-down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.scroll {
+  width: 2vw;
+  height: 2vw;
+opacity: 1;
+  position: absolute;
+  animation: mymove 4.5s infinite;
+  -webkit-animation: down 4.5s infinite; animation-timing-function: ease-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+
+}
+
+@keyframes down {
+  0% {
+    transform: scale(1, 1);
+  }
+  20% {
+    transform: scale(1.1, 1.1);
+  }
+  40% {
+    transform: scale(1.2, 1.2);
+  }
+  60% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+/* @keyframes mymove {
+  from {scale:1;}
+  to {scale:1.2;}
+} */
+/* 
+@-webkit-keyframes down {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translateY(15px);
+  }
+  40% {
+    transform: translate(0);
+  }
+} */
