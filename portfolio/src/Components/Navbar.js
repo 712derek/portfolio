@@ -12,7 +12,7 @@ const Nav = styled.nav`
   z-index: 100;
   position: fixed;
   width: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.2);
 `;
 
 const NavLink = css`
@@ -27,7 +27,7 @@ const NavLink = css`
 
 const Logo = styled(Link)`
   ${NavLink};
-  font-style: italic;
+  font-weight: 600;
 `;
 
 const MenuBars = styled(FaBars)`
