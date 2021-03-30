@@ -27,7 +27,7 @@
 }
 #lead-content h1 {
   color: #fff;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 5rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -35,7 +35,7 @@
 }
 #lead-content h2 {
   /* color: #a0cfee; */
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(96, 219, 249, 1);
   font-weight: 500;
   font-size: 2.25em;
   margin-bottom: 15px;

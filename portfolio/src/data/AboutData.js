@@ -1,3 +1,5 @@
+import ImageOne from "../images/portrait.png";
+
 export const aboutData = [
   {
     text:
@@ -6,5 +8,8 @@ export const aboutData = [
   {
     text:
       "This year I am working to master HTML, CSS, JavaScript and React to combine these competences with my spatial design skills. My long term goal is to become a full stack developer.",
+  },
+  {
+    image: ImageOne,
   },
 ];

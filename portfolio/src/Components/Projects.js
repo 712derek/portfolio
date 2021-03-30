@@ -1,5 +1,4 @@
 import React from "react";
-import "../Style/Projects.css";
 import { projectData } from "../data/ProjectData";
 
 function Projects() {

@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components/macro";
 import { navbarData } from "../data/NavbarData";
 import { Link } from "react-router-dom";
-import { FaBars } from "react-icons/fa";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const Nav = styled.nav`
   height: 60px;
@@ -30,7 +30,7 @@ const Logo = styled(Link)`
   font-weight: 600;
 `;
 
-const MenuBars = styled(FaBars)`
+const MenuBars = styled(AiOutlineMenu)`
   display: none;
   color: #fff;
 
@@ -60,11 +60,11 @@ const NavMenuLinks = styled(Link)`
   ${NavLink}
 `;
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     <Nav>
       <Logo to="/">Derek te Rijdt</Logo>
-      <MenuBars />
+      <MenuBars onClick={toggle} />
       <NavMenu>
         {navbarData.map((item, index) => (
           <NavMenuLinks to={item.link} key={index}>

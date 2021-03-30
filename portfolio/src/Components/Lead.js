@@ -2,7 +2,6 @@ import React from "react";
 
 import "../Style/Lead.css";
 import "../Style/Button.css";
-import Navbar from "../Components/Navbar";
 import Chevron from "../images/chevdown1.png";
 
 export default function Lead() {
@@ -13,7 +12,6 @@ export default function Lead() {
         <h2>React Developer</h2>
         <a href="#" className="btn-rounded-white">
           Download Resume
-          {/* < Navbar/> */}
         </a>
       </div>
 

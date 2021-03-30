@@ -1,5 +1,30 @@
+import ImageEvent from "../images/events.jpeg";
+import ImageIntern from "../images/88888.jpeg";
+import ImageDuo from "../images/duo.jpeg";
+
 export const experienceData = [
-  { title: "Example_1", image: "", text: "This is some text for experience 1" },
-  { title: "Example_2", image: "", text: "This is some text for experience 2" },
-  { title: "Example_3", image: "", text: "This is some text for experience 3" },
+  {
+    title: "Events Officer & Management Assistant.",
+    location: "Institute for European Studies, VUB, Brussels",
+    image: ImageEvent,
+    year: "2019 - 2020",
+    text:
+      "Responsible for organizing academic events, lectures, graduation ceremonies and board meetings.",
+  },
+  {
+    title: "Internship",
+    location: "Office 88888, Brussels",
+    image: ImageIntern,
+    year: "2017",
+    text:
+      "Internship at a small organization specialized in installation art, scenography and architecture.",
+  },
+  {
+    title: "Contact Agent",
+    location: "DUO Ministry of Education, Culture & Science",
+    image: ImageDuo,
+    year: "2014 - 2015",
+    text:
+      "Informing and advizing students on college tuition, their rights, loans and refunds",
+  },
 ];

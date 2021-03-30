@@ -5,5 +5,4 @@ export const navbarData = [
   { title: "Education", link: "/education" },
   { title: "Skills", link: "/skills" },
   { title: "Contact", link: "/contact" },
-  { title: "Contact", link: "/contact" },
 ];
