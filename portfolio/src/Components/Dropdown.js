@@ -2,12 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { navbarData } from "../data/NavbarData";
 import { Link } from "react-router-dom";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlinePlus } from "react-icons/ai";
 
 const DropdownContainer = styled.div`
   position: fixed;
   z-index: ${({ isOpen }) => (isOpen ? "999" : "0")};
-  /* z-index: 999; */
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.9);
@@ -30,8 +29,14 @@ const Icon = styled.div`
   outline: none;
 `;
 
-const CloseIcon = styled(AiOutlineMenu)`
-  color: #000d1a;
+const CloseIcon = styled(AiOutlinePlus)`
+  color: #fff;
+  transform: rotate(45deg) scale(1.25);
+  transition: transform 0.3s cubic-bezier(0.175, 0.85, 0.3, 1.275);
+
+  &:hover {
+    transform: rotate(225deg) scale(1.5);
+  }
 `;
 
 const DropdownWrapper = styled.div``;
@@ -39,12 +44,12 @@ const DropdownWrapper = styled.div``;
 const DropdownMenu = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 80px);
+  grid-template-rows: repeat(6, 4rem);
   text-align: center;
   margin-bottom: 4rem;
 
   @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(4, 60px);
+    grid-template-rows: repeat(6, 60px);
   }
 `;
 

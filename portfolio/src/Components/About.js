@@ -14,7 +14,6 @@ const AboutSection = styled.section`
   background-size: cover !important;
   padding: 15px;
   overflow: hidden !important;
-  /* position: gotcha; */
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Lead from "./Components/Lead";
@@ -8,23 +8,41 @@ import Projects from "./Components/Projects";
 import Experience from "./Components/Experience";
 import GlobalStyle from "./globalStyles";
 import Dropdown from "./Components/Dropdown";
+import Education from "./Components/Education";
+import Footer from "./Components/Footer";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
+  const [show, setShow] = useState(true);
+  const controlNavbar = () => {
+    if (window.scrollY > 200) {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, []);
 
   return (
     <div className="App">
       <GlobalStyle />
       <Router>
-        <Navbar toggle={toggle} />
+        {show ? <Navbar toggle={toggle} /> : <Footer />}
         <Dropdown isOpen={isOpen} toggle={toggle} />
         <Lead />
         <About path="/about" />
         <Experience />
+        <Education />
         <Projects />
       </Router>
     </div>

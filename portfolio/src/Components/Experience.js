@@ -10,14 +10,13 @@ const ExperienceSection = styled.section`
   background-size: cover !important;
   padding: 15px;
   overflow: hidden !important;
-  /* position: gotcha; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     height: 1500px;
   }
 `;
@@ -53,6 +52,10 @@ const ExperienceObject = styled.div`
 
 const ExperienceText = styled.div`
   width: 50%;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const ExperienceImage = styled.img`
@@ -69,6 +72,7 @@ const ExperienceImage = styled.img`
   }
   @media screen and (max-width: 768px) {
     margin: 0;
+    margin-bottom: 1rem;
   }
 `;
 
