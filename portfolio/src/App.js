@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import Navbar from "./Components/Navbar";
 import Lead from "./Components/Lead";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -19,7 +18,7 @@ function App() {
 
   const [show, setShow] = useState(true);
   const controlNavbar = () => {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 0) {
       setShow(false);
     } else {
       setShow(true);

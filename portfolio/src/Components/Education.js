@@ -27,6 +27,7 @@ const ExperienceTitle = styled.div`
   align-items: flex-start;
   margin-bottom: 0.5rem;
   text-align: center;
+  color: white;
   transition: transform 0.3s cubic-bezier(0.175, 0.85, 0.3, 1.275);
 
   &:hover {
@@ -53,6 +54,7 @@ const ExperienceObject = styled.div`
 
 const ExperienceText = styled.div`
   width: 50%;
+  color: white;
 `;
 
 const ExperienceImage = styled.img`

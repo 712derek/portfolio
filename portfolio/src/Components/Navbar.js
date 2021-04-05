@@ -3,6 +3,7 @@ import styled, { css, keyframes } from "styled-components/macro";
 import { navbarData } from "../data/NavbarData";
 import { Link } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
+import { animateScroll as scroll } from "react-scroll";
 
 const appear = keyframes`
   from{
@@ -97,8 +98,9 @@ const Footer = styled.div`
 const Navbar = ({ toggle }) => {
   return (
     <Nav>
-      <Logo to="/">Derek te Rijdt</Logo>
+      <Logo onClick={() => scroll.scrollToTop()}>Derek te Rijdt</Logo>
       <MenuBars onClick={toggle} />
+
       <NavMenu>
         {navbarData.map((item, index) => (
           <NavMenuLinks to={item.link} key={index}>
