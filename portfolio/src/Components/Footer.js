@@ -6,6 +6,8 @@ import {
   AiFillMail,
   AiFillPhone,
 } from "react-icons/ai";
+import { IoIosArrowDropup } from "react-icons/io";
+import { animateScroll as scroll } from "react-scroll";
 
 const appear = keyframes`
   from{
@@ -16,9 +18,21 @@ const appear = keyframes`
   }
 `;
 
+const pulse = keyframes`
+  0%{
+    transform: scale(1);
+  }
+  40%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+`;
+
 const FooterSection = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   height: 60px;
   margin-top: 1rem;
   padding: 1rem 2rem;
@@ -49,10 +63,23 @@ const SocialLinks = styled.div`
 const Phone = styled.div`
   display: flex;
   align-items: center;
+  p {
+    font-size: 1.2rem;
+  }
+`;
+
+const LinkToTop = styled(SocialLinks)`
+  color: white;
+  font-weight: lighter;
+  animation: ${pulse} 1.5s linear infinite;
+  transform: rotate(45deg);
 `;
 
 const Footer = () => (
   <FooterSection>
+    <LinkToTop>
+      <IoIosArrowDropup onClick={() => scroll.scrollToTop()} />
+    </LinkToTop>
     <SocialLinks>
       <AiFillLinkedin to="https://www.linkedin.com/in/derekterijdt/" />
       <AiFillGithub />

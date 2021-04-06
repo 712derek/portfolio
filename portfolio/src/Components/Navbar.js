@@ -100,7 +100,6 @@ const Navbar = ({ toggle }) => {
     <Nav>
       <Logo onClick={() => scroll.scrollToTop()}>Derek te Rijdt</Logo>
       <MenuBars onClick={toggle} />
-
       <NavMenu>
         {navbarData.map((item, index) => (
           <NavMenuLinks to={item.link} key={index}>
