@@ -39,8 +39,8 @@ function App() {
         {show ? <Navbar toggle={toggle} /> : <Footer />}
         <Dropdown isOpen={isOpen} toggle={toggle} />
         <Lead />
-        <About path="/about" />
-        <Experience />
+        <About path="/about" component={About} />
+        <Experience path="/experience" />
         <Education />
         <Projects />
       </Router>

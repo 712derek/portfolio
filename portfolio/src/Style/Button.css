@@ -11,7 +11,6 @@
   color: #3498db;
   background: #fff;
   text-decoration: none;
-  position: gotcha;
 }
 
 #lead-down {
@@ -22,13 +21,13 @@
 }
 
 .scroll {
-  width: 2vw;
+  /* width: 2vw;
   height: 2vw;
-opacity: 1;
+  opacity: 1;
   position: absolute;
   animation: mymove 4.5s infinite;
-  -webkit-animation: down 4.5s infinite; animation-timing-function: ease-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
-
+  -webkit-animation: down 4.5s infinite;
+  animation-timing-function: ease-out; or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
 }
 
 @keyframes down {
@@ -48,19 +47,3 @@ opacity: 1;
     transform: scale(1, 1);
   }
 }
-/* @keyframes mymove {
-  from {scale:1;}
-  to {scale:1.2;}
-} */
-/* 
-@-webkit-keyframes down {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translateY(15px);
-  }
-  40% {
-    transform: translate(0);
-  }
-} */

@@ -9,7 +9,6 @@ const AboutSection = styled.section`
   height: 50vh;
   min-height: 500px;
   max-height: 1080px;
-  /* background: url(https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3150&q=80); */
   background: rgb(136, 136, 136);
   background-size: cover !important;
   padding: 15px;
@@ -18,6 +17,10 @@ const AboutSection = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    height: 110vh;
+  }
 `;
 
 const AboutTitle = styled.div`

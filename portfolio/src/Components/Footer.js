@@ -70,9 +70,7 @@ const Phone = styled.div`
 
 const LinkToTop = styled(SocialLinks)`
   color: white;
-  font-weight: lighter;
   animation: ${pulse} 1.5s linear infinite;
-  transform: rotate(45deg);
 `;
 
 const Footer = () => (
@@ -81,7 +79,7 @@ const Footer = () => (
       <IoIosArrowDropup onClick={() => scroll.scrollToTop()} />
     </LinkToTop>
     <SocialLinks>
-      <AiFillLinkedin to="https://www.linkedin.com/in/derekterijdt/" />
+      <AiFillLinkedin href="https://www.linkedin.com/in/derekterijdt/" />
       <AiFillGithub />
       <AiFillMail />
       <Phone>
