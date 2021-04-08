@@ -22,7 +22,7 @@ const Nav = styled.nav`
   z-index: 100;
   position: fixed;
   width: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(211, 211, 211, 0.2);
   animation: ${appear} 0.3s ease-out;
 `;
 

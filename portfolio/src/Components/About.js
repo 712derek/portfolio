@@ -9,7 +9,8 @@ const AboutSection = styled.section`
   height: 50vh;
   min-height: 500px;
   max-height: 1080px;
-  background: rgb(136, 136, 136);
+  /* background: rgb(136, 136, 136); */
+  background: rgb(211, 211, 211);
   background-size: cover !important;
   padding: 15px;
   overflow: hidden !important;

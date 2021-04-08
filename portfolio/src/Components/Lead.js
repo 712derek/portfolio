@@ -6,6 +6,14 @@ import { IoIosArrowDropdown } from "react-icons/io";
 import img from "../images/lead_bg2.jpeg";
 import Button from "./Button";
 import cv from "../docs/CV_Derek.pdf";
+import {
+  Link,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 
 const pulse = keyframes`
   0%{

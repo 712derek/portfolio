@@ -9,6 +9,7 @@ import GlobalStyle from "./globalStyles";
 import Dropdown from "./Components/Dropdown";
 import Education from "./Components/Education";
 import Footer from "./Components/Footer";
+import SocialBar from "./Components/SocialBar";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,9 +37,10 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Router>
-        {show ? <Navbar toggle={toggle} /> : <Footer />}
+        {show ? <Navbar toggle={toggle} /> : null}
         <Dropdown isOpen={isOpen} toggle={toggle} />
         <Lead />
+        <SocialBar />
         <About path="/about" component={About} />
         <Experience path="/experience" />
         <Education />

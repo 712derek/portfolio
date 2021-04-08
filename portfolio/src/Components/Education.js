@@ -8,7 +8,8 @@ const ExperienceSection = styled.section`
   min-height: 500px;
   max-height: 1080px;
   background-size: cover !important;
-  background: rgb(136, 136, 136);
+  /* background: rgb(136, 136, 136); */
+  background: rgb(211, 211, 211);
   padding: 15px;
   overflow: hidden !important;
   display: flex;
