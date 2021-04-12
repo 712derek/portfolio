@@ -9,6 +9,8 @@ const GlobalStyle = createGlobalStyle`
 
   html, body{
     overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    overflow: scroll;
   }
 `;
 

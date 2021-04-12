@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { educationData } from "../data/EducationData";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 
 const ExperienceSection = styled.section`
   position: relative;
@@ -8,10 +9,9 @@ const ExperienceSection = styled.section`
   min-height: 500px;
   max-height: 1080px;
   background-size: cover !important;
-  /* background: rgb(136, 136, 136); */
-  background: rgb(211, 211, 211);
+  /* background: rgb(211, 211, 211); */
   padding: 15px;
-  overflow: hidden !important;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +43,16 @@ const ExperienceObject = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0)
+  );
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -54,22 +63,26 @@ const ExperienceObject = styled.div`
 `;
 
 const ExperienceText = styled.div`
-  width: 50%;
-  color: white;
+  height: 200px;
+  width: 400px;
+  margin-left: 2rem;
+  overflow: scroll;
+  cursor: ns-resize;
+
+  h3 {
+    margin: 1rem 0;
+  }
+  p {
+    margin: 0.5rem 0;
+  }
 `;
 
 const ExperienceImage = styled.img`
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  margin-right: 2rem;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s cubic-bezier(0.175, 0.85, 0.3, 1.275);
+  height: 200px;
+  min-width: 270px;
+  object-fit: cover;
+  border-radius: 5px 0 0 5px;
 
-  &:hover {
-    transform: scale(1.5);
-    z-index: 999;
-  }
   @media screen and (max-width: 768px) {
     margin: 0;
   }
@@ -85,13 +98,14 @@ function Education() {
         {educationData.map((item, index) => (
           <ExperienceObject key={index}>
             <ExperienceImage src={item.image} />
+
             <ExperienceText>
               <h3>{item.title}</h3>
               <p>
                 {item.location}, {item.year}
               </p>
-              <p>{item.text}</p>
               <p>{item.degree}</p>
+              <p>{item.text}</p>
             </ExperienceText>
           </ExperienceObject>
         ))}

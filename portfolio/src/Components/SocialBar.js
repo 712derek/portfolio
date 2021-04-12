@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
-import { AiFillLinkedin, AiFillGithub, AiFillMail } from "react-icons/ai";
+import {
+  AiFillLinkedin,
+  AiFillGithub,
+  AiFillMail,
+  AiFillInstagram,
+} from "react-icons/ai";
 import { IoIosPin, IoIosCall } from "react-icons/io";
 
 const appear = keyframes`
@@ -100,6 +105,9 @@ const SocialBar = () => {
           </a>
           <a href="https://github.com/712derek" target="_blank">
             <AiFillGithub />
+          </a>
+          <a href="https://www.instagram.com/712_derek/" target="_blank">
+            <AiFillInstagram />
           </a>
           <a
             href="https://www.google.com/maps/place/Bosni%C3%ABstraat+56,+1060+Sint-Gillis/@50.827403,4.3354008,17z/data=!3m1!4b1!4m5!3m4!1s0x47c3c44208e85cb9:0x204c02054305c22f!8m2!3d50.8273996!4d4.3375895"
