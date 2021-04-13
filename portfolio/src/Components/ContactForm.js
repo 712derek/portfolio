@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../firebase";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const FormSection = styled.form`
   position: relative;
@@ -16,7 +16,7 @@ const FormSection = styled.form`
   background: rgb(211, 211, 211);
 
   @media (max-width: 768px) {
-    height: 1500px;
+    height: cacl(100% + 10vh);
   }
 `;
 
@@ -43,15 +43,22 @@ const FormTop = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 0.5rem;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const FormBottom = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
 `;
 
-const FormName = styled.input`
+const FormStyle = css`
   width: 300px;
   height: 40px;
   margin-right: 0.5rem;
@@ -59,6 +66,7 @@ const FormName = styled.input`
   border: 1px solid #fff;
   border-radius: 3px;
   transition: all 0.1s ease;
+  box-shadow: 0 0 5px 0.5px rgba(0, 0, 0, 0.2);
 
   &::placeholder {
     color: rgba(46, 49, 49, 1);
@@ -68,31 +76,34 @@ const FormName = styled.input`
   }
   &:focus {
     outline: none;
-    background-color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+
     color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 0.5rem;
   }
 `;
 
-const FormEmail = styled(FormName)``;
+const FormName = styled.input`
+  ${FormStyle}
+`;
+
+const FormEmail = styled.input`
+  ${FormStyle}
+`;
 
 const FormTextarea = styled.textarea`
+  ${FormStyle}
   width: 608px;
   height: 120px;
   margin-bottom: 0.5rem;
-  border: 1px solid #fff;
-  border-radius: 3px;
-  padding: 0.5rem;
 
-  &::placeholder {
-    color: rgba(46, 49, 49, 1);
-  }
-  &:hover {
-    border: 2px solid rgba(0, 0, 0, 0.6);
-  }
-  &:focus {
-    outline: none;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
+  @media (max-width: 768px) {
+    margin-top: -0.5rem;
+    width: 300px;
   }
 `;
 
@@ -104,9 +115,15 @@ const FormButton = styled.button`
   border-radius: 3px;
   outline: none;
   color: rgba(46, 49, 49, 1);
+  box-shadow: 0 0 5px 0.5px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease;
 
   &:hover {
     border: 2px solid rgba(0, 0, 0, 0.6);
+  }
+
+  @media (max-width: 768px) {
+    width: 200px;
   }
 `;
 
@@ -115,9 +132,6 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [buttonText, setButtonText] = useState("Send");
-
-  const changeText = (text) => setButtonText(text);
-
   const [loader, setLoader] = useState(false);
 
   const handleSubmit = (e) => {
@@ -161,7 +175,7 @@ const ContactForm = () => {
         </FormTop>
         <FormBottom>
           <FormTextarea
-            placeholder="  Message"
+            placeholder="Message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
@@ -170,7 +184,7 @@ const ContactForm = () => {
             type="submit"
             style={{
               background: loader ? "rgba(0, 0, 0, 0.6)" : "#fff",
-              color: loader ? "white" : "",
+              color: loader ? "white" : "rgba(46, 49, 49, 1)",
               fontWeight: loader ? "bolder" : "bold",
             }}
           >

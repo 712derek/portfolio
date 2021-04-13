@@ -19,7 +19,7 @@ const ProjectSection = styled.section`
   background: rgb(211, 211, 211);
 
   @media (max-width: 768px) {
-    height: 1500px;
+    height: 100%;
   }
 `;
 

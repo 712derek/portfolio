@@ -34,7 +34,6 @@ const FooterSection = styled.div`
   display: flex;
   justify-content: space-between;
   height: 60px;
-  margin-top: 1rem;
   padding: 1rem 2rem;
   background: rgb(0, 0, 0);
 
@@ -42,7 +41,6 @@ const FooterSection = styled.div`
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
   animation: ${appear} 0.3s ease-out;
 
   @media screen and (max-width: 768px) {

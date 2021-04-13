@@ -7,9 +7,9 @@ const ExperienceSection = styled.section`
   height: 100vh;
   min-height: 500px;
   max-height: 1080px;
-  background-size: cover !important;
+  background-size: cover;
   padding: 15px;
-  overflow: hidden !important;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,7 @@ const ExperienceSection = styled.section`
   justify-content: space-around;
 
   @media (max-width: 768px) {
-    height: 1500px;
+    height: 2000px;
   }
 `;
 
