@@ -36,7 +36,7 @@ const FooterSection = styled.div`
   height: 60px;
   margin-top: 1rem;
   padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgb(0, 0, 0);
 
   position: relative;
   bottom: 0;
@@ -82,15 +82,6 @@ const Footer = () => (
     <LinkToTop>
       <IoIosArrowDropup onClick={() => scroll.scrollToTop()} />
     </LinkToTop>
-    <SocialLinks>
-      <AiFillLinkedin href="https://www.linkedin.com/in/derekterijdt/" />
-      <AiFillGithub />
-      <AiFillMail />
-      <Phone>
-        <AiFillPhone />
-        <p>04 85 98 8001</p>
-      </Phone>
-    </SocialLinks>
   </FooterSection>
 );
 

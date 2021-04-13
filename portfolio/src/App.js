@@ -6,11 +6,12 @@ import About from "./Components/About";
 import Projects from "./Components/Projects";
 import Experience from "./Components/Experience";
 import GlobalStyle from "./globalStyles";
-import Dropdown from "./Components/Dropdown";
+// import Dropdown from "./Components/Dropdown";
 import Education from "./Components/Education";
 import Footer from "./Components/Footer";
 import SocialBar from "./Components/SocialBar";
 import { projectData } from "./data/ProjectData";
+import ContactForm from "./Components/ContactForm";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,13 +40,14 @@ function App() {
       <GlobalStyle />
       <Router>
         {show ? <Navbar toggle={toggle} /> : null}
-        <Dropdown isOpen={isOpen} toggle={toggle} />
+        {/* <Dropdown isOpen={isOpen} toggle={toggle} /> */}
         <Lead />
         <SocialBar />
         <About path="/about" component={About} />
         <Experience path="/experience" />
         <Projects slides={projectData} />
         <Education />
+        <ContactForm />
         <Footer />
       </Router>
     </div>
