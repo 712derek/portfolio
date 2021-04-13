@@ -51,11 +51,10 @@ const FormTop = styled.div`
   }
 `;
 
-const FormBottom = styled.div`
+const FormBottom = styled(FormTop)`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
 `;
 
 const FormStyle = css`
