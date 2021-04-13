@@ -12,6 +12,13 @@ const GlobalStyle = createGlobalStyle`
     scroll-snap-type: y mandatory;
     overflow: scroll;
   }
+
+  h3 {
+    margin: 1rem 0;
+  }
+  p {
+    margin: 0.5rem 0;
+  }
 `;
 
 export default GlobalStyle;

@@ -38,12 +38,16 @@ const FooterSection = styled.div`
   padding: 1rem 2rem;
   background: rgba(0, 0, 0, 0.8);
 
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 100;
   animation: ${appear} 0.3s ease-out;
+
+  @media screen and (max-width: 768px) {
+    height: 120px;
+  }
 `;
 
 const SocialLinks = styled.div`

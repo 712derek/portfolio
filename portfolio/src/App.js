@@ -10,7 +10,7 @@ import Dropdown from "./Components/Dropdown";
 import Education from "./Components/Education";
 import Footer from "./Components/Footer";
 import SocialBar from "./Components/SocialBar";
-import { educationData } from "./data/EducationData";
+import { projectData } from "./data/ProjectData";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,8 +44,9 @@ function App() {
         <SocialBar />
         <About path="/about" component={About} />
         <Experience path="/experience" />
-        <Projects />
-        <Education slides={educationData} />
+        <Projects slides={projectData} />
+        <Education />
+        <Footer />
       </Router>
     </div>
   );
