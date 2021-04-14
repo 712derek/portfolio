@@ -110,7 +110,7 @@ const SocialBar = () => {
             <AiFillInstagram />
           </a>
           <a
-            href="https://www.google.com/maps/place/Bosni%C3%ABstraat+56,+1060+Sint-Gillis/@50.827403,4.3354008,17z/data=!3m1!4b1!4m5!3m4!1s0x47c3c44208e85cb9:0x204c02054305c22f!8m2!3d50.8273996!4d4.3375895"
+            href="https://www.google.com/maps/place/Bosni%C3%ABstraat,+1060+Sint-Gillis/@50.8277032,4.3348366,17z/data=!3m1!4b1!4m5!3m4!1s0x47c3c4420043693b:0xb7df8abd84afb53a!8m2!3d50.8277032!4d4.3370253"
             target="_blank"
           >
             <IoIosPin />

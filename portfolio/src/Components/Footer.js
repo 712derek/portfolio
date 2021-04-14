@@ -1,11 +1,5 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import {
-  AiFillLinkedin,
-  AiFillGithub,
-  AiFillMail,
-  AiFillPhone,
-} from "react-icons/ai";
 import { IoIosArrowDropup } from "react-icons/io";
 import { animateScroll as scroll } from "react-scroll";
 
