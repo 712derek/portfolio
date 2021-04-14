@@ -4,6 +4,7 @@ import "../Style/Lead.css";
 import "../Style/Button.css";
 import { IoIosArrowDropdown } from "react-icons/io";
 import img from "../images/lead_bg2.jpeg";
+import img2 from "../images/fontainebleau.jpeg";
 import Button from "./Button";
 import cv from "../docs/CV_Derek.pdf";
 import {
@@ -32,7 +33,7 @@ const LeadSection = styled.section`
   height: 100vh;
   min-height: 500px;
   max-height: 1080px;
-  background: url(${img});
+  background: url(${img2});
   background-size: cover !important;
   padding: 15px;
   overflow: hidden !important;
