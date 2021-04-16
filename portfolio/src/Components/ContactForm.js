@@ -164,12 +164,14 @@ const ContactForm = () => {
             placeholder="Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            required
           />
           <FormEmail
             placeholder="Email"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
         </FormTop>
         <FormBottom>
@@ -177,6 +179,7 @@ const ContactForm = () => {
             placeholder="Message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
+            required
           />
           <FormButton
             onClick={() => setButtonText("Message Send")}
