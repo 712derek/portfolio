@@ -101,7 +101,6 @@ const ArrowRight = styled(AiFillCaretRight)`
 `;
 
 function Education({ slides }) {
-  // const slides = [1, 2, 3];
   const [current, setCurrent] = useState(0);
   const length = slides.length;
   const timeout = useRef(null);

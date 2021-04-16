@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import {
   AiFillLinkedin,
@@ -6,7 +7,7 @@ import {
   AiFillMail,
   AiFillInstagram,
 } from "react-icons/ai";
-import { IoIosPin, IoIosCall } from "react-icons/io";
+import { IoIosPin } from "react-icons/io";
 
 const appear = keyframes`
   from{
@@ -100,27 +101,33 @@ const SocialBar = () => {
     <>
       {show ? (
         <SocialSection>
-          <a href="https://www.linkedin.com/in/derekterijdt/" target="_blank">
+          <Link
+            to={{ pathname: "https://www.linkedin.com/in/derekterijdt/" }}
+            target="_blank"
+          >
             <AiFillLinkedin />
-          </a>
-          <a href="https://github.com/712derek" target="_blank">
+          </Link>
+          <Link href="https://github.com/712derek" target="_blank">
             <AiFillGithub />
-          </a>
-          <a href="https://www.instagram.com/712_derek/" target="_blank">
+          </Link>
+          <Link
+            to={{ pathname: "https://www.instagram.com/712_derek/" }}
+            target="_blank"
+          >
             <AiFillInstagram />
-          </a>
-          <a
-            href="https://www.google.com/maps/place/Bosni%C3%ABstraat,+1060+Sint-Gillis/@50.8277032,4.3348366,17z/data=!3m1!4b1!4m5!3m4!1s0x47c3c4420043693b:0xb7df8abd84afb53a!8m2!3d50.8277032!4d4.3370253"
+          </Link>
+          <Link
+            to={{
+              pathname:
+                "https://www.google.com/maps/place/Bosni%C3%ABstraat,+1060+Sint-Gillis/@50.8277032,4.3348366,17z/data=!3m1!4b1!4m5!3m4!1s0x47c3c4420043693b:0xb7df8abd84afb53a!8m2!3d50.8277032!4d4.3370253",
+            }}
             target="_blank"
           >
             <IoIosPin />
-          </a>
-          <a href="mailto:derekterijdt@gmail.com">
+          </Link>
+          <Link to={{ mailto: "derekterijdt@gmail.com" }}>
             <AiFillMail />
-          </a>
-          <a href="tel:0032485988001">
-            <IoIosCall />
-          </a>
+          </Link>
         </SocialSection>
       ) : null}
     </>

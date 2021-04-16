@@ -8,7 +8,7 @@ const ExperienceSection = styled.section`
   height: 100vh;
   min-height: 500px;
   max-height: 1080px;
-  background-size: cover !important;
+  background-size: cover;
   /* background: rgb(211, 211, 211); */
   padding: 15px;
   overflow: hidden;
@@ -16,10 +16,9 @@ const ExperienceSection = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
 
-  @media screen and (max-width: 768px) {
-    height: 1500px;
+  @media (max-width: 768px) {
+    height: 100%;
   }
 `;
 
@@ -53,11 +52,11 @@ const ExperienceObject = styled.div`
     rgba(0, 0, 0, 0)
   );
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     justify-content: center;
-    text-align: center;
     margin-bottom: 1.5rem;
+    border: none;
   }
 `;
 
@@ -74,12 +73,26 @@ const ExperienceText = styled.div`
   p {
     margin: 0.5rem 0;
   }
+
+  @media (max-width: 768px) {
+    margin: 0;
+    text-align: justify;
+    width: 80%;
+
+    border: 1px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0)
+    );
+  }
 `;
 
 const ExperienceImage = styled.img`
   height: 200px;
   min-width: 270px;
-
   object-fit: cover;
   border-radius: 5px 0 0 5px;
 
