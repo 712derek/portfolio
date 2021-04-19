@@ -6,7 +6,7 @@ import ImageOne from "../images/portrait.png";
 
 const AboutSection = styled.section`
   position: relative;
-  height: 50vh;
+  height: 100vh;
   min-height: 500px;
   max-height: 1080px;
   /* background: rgb(136, 136, 136); */

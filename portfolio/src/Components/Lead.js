@@ -28,6 +28,10 @@ const LeadSection = styled.section`
   background-size: cover !important;
   padding: 15px;
   overflow: hidden !important;
+
+  @media (max-width: 768px) {
+    background-position: center;
+  }
 `;
 
 const LeadContent = styled.div`

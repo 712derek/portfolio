@@ -27,7 +27,7 @@ const pulse = keyframes`
 const FooterSection = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 60px;
+  height: 25vh;
   padding: 1rem 2rem;
   background: rgb(0, 0, 0);
 

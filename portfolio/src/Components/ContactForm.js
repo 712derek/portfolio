@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 
 const FormSection = styled.form`
   position: relative;
-  height: 400px;
+  height: 75vh;
   background-size: cover !important;
   padding: 15px;
   overflow: hidden !important;

@@ -39,12 +39,12 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Router>
-        {show ? <Navbar toggle={toggle} /> : null}
+        <Navbar toggle={toggle} />
         <Dropdown isOpen={isOpen} toggle={toggle} />
         <Lead />
         <SocialBar />
-        <About path="/about" component={About} />
-        <Experience path="/experience" />
+        <About component={About} />
+        <Experience />
         <Projects slides={projectData} />
         <Education />
         <ContactForm />

@@ -15,15 +15,16 @@ const appear = keyframes`
 `;
 
 const Nav = styled.nav`
-  height: 60px;
+  height: ${({ navbar }) => (navbar ? "30px" : "60px")};
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
   z-index: 100;
   position: fixed;
   width: 100%;
-  background: rgba(211, 211, 211, 0.2);
   animation: ${appear} 0.3s ease-out;
+  transition: all 0.5s ease-in-out;
+  background: ${({ navbar }) => (navbar ? "rgba(211, 211, 211, 0.9)" : "")};
 `;
 
 const NavLink = css`
@@ -84,20 +85,22 @@ const NavMenuLinks = styled(Link)`
   margin-right: 1rem;
 `;
 
-const Footer = styled.div`
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  z-index: 100;
-  position: fixed;
-  width: 100%;
-  color: red;
-`;
-
 const Navbar = ({ toggle }) => {
+  const [navbar, setNavbar] = useState(false);
+
+  const changeNavbar = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 100) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeNavbar);
+
   return (
-    <Nav>
+    <Nav navbar={navbar}>
       <Logo onClick={() => scroll.scrollToTop()}>Derek te Rijdt</Logo>
       <MenuBars onClick={toggle} />
       <NavMenu>
