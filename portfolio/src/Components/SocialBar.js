@@ -17,7 +17,7 @@ const SocialSection = styled.section`
   z-index: 10;
   display: flex;
   flex-direction: column;
-  top: 25%;
+  top: 33%;
   border-radius: 0 5px 5px 0;
   background: rgba(211, 211, 211, 0.5);
   font-size: 1.5rem;

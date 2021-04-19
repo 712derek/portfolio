@@ -21,7 +21,16 @@ const pulse = keyframes`
 
 const appear = keyframes`
   from{
-    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+`;
+
+const appearBottom = keyframes`
+  from{
+    transform: translateY(130%);
   }
   to{
     transform: translateY(0%);
@@ -51,8 +60,7 @@ const LeadContent = styled.div`
   transform: translate(-50%, -50%);
   text-align: center;
   margin: 0;
-
-  animation: ${appear} 0.5s ease-out;
+  animation: ${appear} 3s ease-in-out;
 
   h1 {
     color: #fff;
@@ -96,12 +104,14 @@ const LeadDown = styled.i`
   bottom: 15px;
   color: #fff;
   font-size: 2rem;
-  animation: ${pulse} 1.5s linear infinite;
+  animation: ${appearBottom} 1s ease-in-out;
 
   svg {
     cursor: pointer;
+    animation: ${pulse} 1.5s linear infinite;
+
     &:hover {
-      color: rgba(96, 219, 249, 0.8);
+      color: rgba(96, 219, 249);
     }
   }
 `;
