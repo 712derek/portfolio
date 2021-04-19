@@ -22,7 +22,7 @@ const Nav = styled.nav`
   z-index: 100;
   position: fixed;
   width: 100%;
-  animation: ${appear} 0.3s ease-out;
+  animation: ${appear} 0.5s ease-out;
   transition: all 0.5s ease-in-out;
   background: ${({ navbar }) => (navbar ? "rgba(211, 211, 211, 0.9)" : "")};
 `;
@@ -90,7 +90,7 @@ const Navbar = ({ toggle }) => {
 
   const changeNavbar = () => {
     console.log(window.scrollY);
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 500) {
       setNavbar(true);
     } else {
       setNavbar(false);

@@ -19,6 +19,15 @@ const pulse = keyframes`
   }
 `;
 
+const appear = keyframes`
+  from{
+    transform: translateY(-100%);
+  }
+  to{
+    transform: translateY(0%);
+  }
+`;
+
 const LeadSection = styled.section`
   position: relative;
   height: 100vh;
@@ -42,6 +51,8 @@ const LeadContent = styled.div`
   transform: translate(-50%, -50%);
   text-align: center;
   margin: 0;
+
+  animation: ${appear} 0.5s ease-out;
 
   h1 {
     color: #fff;
