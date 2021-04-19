@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { navbarData } from "../data/NavbarData";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import { AiOutlinePlus } from "react-icons/ai";
 
 const DropdownContainer = styled.div`
@@ -73,7 +73,7 @@ const DropdownLink = styled(Link)`
 
 const Dropdown = ({ isOpen, toggle }) => {
   return (
-    <div>
+    <>
       <DropdownContainer isOpen={isOpen} onClick={toggle}>
         <Icon onClick={toggle}>
           <CloseIcon />
@@ -81,14 +81,20 @@ const Dropdown = ({ isOpen, toggle }) => {
         <DropdownWrapper>
           <DropdownMenu>
             {navbarData.map((item, index) => (
-              <DropdownLink to={item.link} key={index}>
+              <DropdownLink
+                to={item.link}
+                key={index}
+                smooth={true}
+                duration={750}
+                onClick={toggle}
+              >
                 {item.title}
               </DropdownLink>
             ))}
           </DropdownMenu>
         </DropdownWrapper>
       </DropdownContainer>
-    </div>
+    </>
   );
 };
 

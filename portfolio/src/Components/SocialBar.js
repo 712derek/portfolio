@@ -8,6 +8,7 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { IoIosPin } from "react-icons/io";
+import { Link as ScrollLink } from "react-scroll";
 
 const appear = keyframes`
   from{
@@ -125,9 +126,9 @@ const SocialBar = () => {
           >
             <IoIosPin />
           </Link>
-          <Link to={{ mailto: "derekterijdt@gmail.com" }}>
+          <ScrollLink to="contact" smooth={true} duration={750}>
             <AiFillMail />
-          </Link>
+          </ScrollLink>
         </SocialSection>
       ) : null}
     </>

@@ -5,14 +5,7 @@ import img from "../images/lead_bg2.jpeg";
 import img2 from "../images/fontainebleau.jpeg";
 import Button from "./Button";
 import cv from "../docs/CV_Derek.pdf";
-import {
-  Link,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { Link } from "react-scroll";
 
 const pulse = keyframes`
   0%{
@@ -110,7 +103,9 @@ const Lead = () => {
       </LeadContent>
       <LeadOverlay />
       <LeadDown>
-        <IoIosArrowDropdown />
+        <Link to="about" smooth={true} duration={750}>
+          <IoIosArrowDropdown />
+        </Link>
       </LeadDown>
     </LeadSection>
   );
