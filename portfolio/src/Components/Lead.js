@@ -1,7 +1,5 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import "../Style/Lead.css";
-import "../Style/Button.css";
 import { IoIosArrowDropdown } from "react-icons/io";
 import img from "../images/lead_bg2.jpeg";
 import img2 from "../images/fontainebleau.jpeg";

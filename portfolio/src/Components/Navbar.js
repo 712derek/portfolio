@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled, { css, keyframes } from "styled-components/macro";
 import { navbarData } from "../data/NavbarData";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import { AiOutlineMenu } from "react-icons/ai";
 import { animateScroll as scroll } from "react-scroll";
 
@@ -102,7 +102,7 @@ const Navbar = ({ toggle }) => {
       <MenuBars onClick={toggle} />
       <NavMenu>
         {navbarData.map((item, index) => (
-          <NavMenuLinks to={item.link} key={index}>
+          <NavMenuLinks to={item.link} key={index} smooth={true} duration={750}>
             {item.title}
           </NavMenuLinks>
         ))}

@@ -80,7 +80,7 @@ const AboutText = styled.p`
 
 function About() {
   return (
-    <AboutSection>
+    <AboutSection id="about">
       <AboutTitle>
         <h2>About Me</h2>
       </AboutTitle>

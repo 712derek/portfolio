@@ -103,7 +103,7 @@ const ExperienceImage = styled.img`
 
 function Education() {
   return (
-    <ExperienceSection>
+    <ExperienceSection id="education">
       <ExperienceTitle>
         <h2>Education</h2>
       </ExperienceTitle>

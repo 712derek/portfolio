@@ -78,7 +78,7 @@ const ExperienceImage = styled.img`
 
 function Experience() {
   return (
-    <ExperienceSection>
+    <ExperienceSection id="experience">
       <ExperienceTitle>
         <h2>Experience</h2>
       </ExperienceTitle>

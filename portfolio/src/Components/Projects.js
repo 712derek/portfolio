@@ -155,7 +155,7 @@ function Education({ slides }) {
   }
 
   return (
-    <ProjectSection>
+    <ProjectSection id="projects">
       <ProjectTitle>
         <h2>Projects</h2>
       </ProjectTitle>

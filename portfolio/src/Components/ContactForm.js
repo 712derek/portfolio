@@ -154,7 +154,7 @@ const ContactForm = () => {
   };
 
   return (
-    <FormSection onSubmit={handleSubmit}>
+    <FormSection onSubmit={handleSubmit} id="contact">
       <FormTitle>
         <h2>Contact Me</h2>
       </FormTitle>
