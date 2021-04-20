@@ -12,33 +12,44 @@ import Footer from "./Components/Footer";
 import SocialBar from "./Components/SocialBar";
 import { projectData } from "./data/ProjectData";
 import ContactForm from "./Components/ContactForm";
+import { Spinner } from "./Components/Spinner";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const toggle = () => {
     setIsOpen(!isOpen);
   };
 
-  const [show, setShow] = useState(true);
-  const controlNavbar = () => {
-    if (window.scrollY > 100) {
-      setShow(false);
-    } else {
-      setShow(true);
-    }
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", controlNavbar);
-    return () => {
-      window.removeEventListener("scroll", controlNavbar);
-    };
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
   }, []);
+
+  // const [show, setShow] = useState(true);
+  // const controlNavbar = () => {
+  //   if (window.scrollY > 100) {
+  //     setShow(false);
+  //   } else {
+  //     setShow(true);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", controlNavbar);
+  //   return () => {
+  //     window.removeEventListener("scroll", controlNavbar);
+  //   };
+  // }, []);
 
   return (
     <div className="App">
       <GlobalStyle />
       <Router>
+        <Spinner />
         <Navbar toggle={toggle} />
         <Dropdown isOpen={isOpen} toggle={toggle} />
         <Lead />
