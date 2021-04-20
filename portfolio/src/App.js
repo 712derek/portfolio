@@ -12,7 +12,7 @@ import Footer from "./Components/Footer";
 import SocialBar from "./Components/SocialBar";
 import { projectData } from "./data/ProjectData";
 import ContactForm from "./Components/ContactForm";
-import { Spinner } from "./Components/Spinner";
+import Spinner from "./Components/Spinner";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 3000);
   }, []);
 
   // const [show, setShow] = useState(true);
@@ -46,22 +46,27 @@ function App() {
   // }, []);
 
   return (
-    <div className="App">
-      <GlobalStyle />
-      <Router>
+    <>
+      {loading ? (
         <Spinner />
-        <Navbar toggle={toggle} />
-        <Dropdown isOpen={isOpen} toggle={toggle} />
-        <Lead />
-        <SocialBar />
-        <About component={About} />
-        <Experience />
-        <Projects slides={projectData} />
-        <Education />
-        <ContactForm />
-        <Footer />
-      </Router>
-    </div>
+      ) : (
+        <div className="App">
+          <GlobalStyle />
+          <Router>
+            <Navbar toggle={toggle} />
+            <Dropdown isOpen={isOpen} toggle={toggle} />
+            <Lead />
+            <SocialBar />
+            <About component={About} />
+            <Experience />
+            <Projects slides={projectData} />
+            <Education />
+            <ContactForm />
+            <Footer />
+          </Router>
+        </div>
+      )}
+    </>
   );
 }
 
