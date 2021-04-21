@@ -22,6 +22,7 @@ const SocialSection = styled.section`
   background: rgba(211, 211, 211, 0.5);
   font-size: 1.5rem;
   color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   transform: ${({ show }) => (show ? "translateX(0%)" : "translateX(-100%)")};
 

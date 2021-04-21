@@ -51,6 +51,8 @@ const Logo = styled(Link)`
 const MenuBars = styled(AiOutlineMenu)`
   display: none;
   color: #fff;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+
   transition: transform 0.3s cubic-bezier(0.175, 0.85, 0.3, 1.275);
 
   &:hover {

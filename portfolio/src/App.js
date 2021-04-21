@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Components/Navbar";
 import Lead from "./Components/Lead";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import About from "./Components/About";
 import Projects from "./Components/Projects";
 import Experience from "./Components/Experience";
@@ -13,6 +13,7 @@ import SocialBar from "./Components/SocialBar";
 import { projectData } from "./data/ProjectData";
 import ContactForm from "./Components/ContactForm";
 import Spinner from "./Components/Spinner";
+import Skills from "./Components/Skills";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,13 +55,14 @@ function App() {
           <GlobalStyle />
           <Router>
             <Navbar toggle={toggle} />
-            <Dropdown isOpen={isOpen} toggle={toggle} />
+            {/* <Dropdown isOpen={isOpen} toggle={toggle} /> */}
             <Lead />
             <SocialBar />
             <About component={About} />
             <Experience />
             <Projects slides={projectData} />
             <Education />
+            <Skills />
             <ContactForm />
             <Footer />
           </Router>
