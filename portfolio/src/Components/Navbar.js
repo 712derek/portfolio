@@ -91,7 +91,6 @@ const Navbar = ({ toggle }) => {
   const [navbar, setNavbar] = useState(false);
 
   const changeNavbar = () => {
-    console.log(window.scrollY);
     if (window.scrollY >= 500) {
       setNavbar(true);
     } else {
