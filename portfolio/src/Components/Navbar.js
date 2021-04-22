@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import styled, { css, keyframes } from "styled-components/macro";
 import { navbarData } from "../data/NavbarData";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import { AiOutlineMenu } from "react-icons/ai";
-import { animateScroll as scroll } from "react-scroll";
+import Scrollspy from "react-scrollspy";
 
 const appear = keyframes`
   from{
@@ -87,7 +87,7 @@ const NavMenuLinks = styled(Link)`
   margin-right: 1rem;
 `;
 
-const Navbar = ({ toggle }) => {
+const Navbar = ({}) => {
   const [navbar, setNavbar] = useState(false);
 
   const changeNavbar = () => {
@@ -104,7 +104,7 @@ const Navbar = ({ toggle }) => {
   return (
     <Nav navbar={navbar}>
       <Logo onClick={() => scroll.scrollToTop()}>Derek te Rijdt</Logo>
-      <MenuBars onClick={toggle} />
+      <MenuBars />
       <NavMenu>
         {navbarData.map((item, index) => (
           <NavMenuLinks to={item.link} key={index} smooth={true} duration={750}>
