@@ -88,7 +88,7 @@ const SocialBar = () => {
       >
         <AiFillLinkedin />
       </Link>
-      <Link href="https://github.com/712derek" target="_blank">
+      <Link to={{ pathname: "https://github.com/712derek" }} target="_blank">
         <AiFillGithub />
       </Link>
       <Link

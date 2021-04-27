@@ -50,6 +50,7 @@ const ProjectText = styled.div`
   flex-direction: column;
   margin: 0 3rem;
   width: 300px;
+  max-height: 400px;
   color: white;
 `;
 
