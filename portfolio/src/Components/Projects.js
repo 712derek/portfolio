@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { projectData } from "../data/ProjectData";
 import styled, { css } from "styled-components";
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
+import { StyledH2 } from "./titleStyles";
 
 const ProjectSection = styled.section`
   position: relative;
@@ -23,19 +24,7 @@ const ProjectSection = styled.section`
   }
 `;
 
-const ProjectTitle = styled.div`
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 0.5rem;
-  text-align: center;
-  color: white;
-  transition: transform 0.3s cubic-bezier(0.175, 0.85, 0.3, 1.275);
-
-  &:hover {
-    transform: scale(1.5);
-    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  }
-`;
+const ProjectTitle = styled(StyledH2)``;
 
 const ProjectWrapper = styled.div`
   width: 80vw;
@@ -96,11 +85,9 @@ const ArrowStyle = css`
     color: rgba(96, 219, 249, 0.8);
   }
 `;
-
 const ArrowLeft = styled(AiFillCaretLeft)`
   ${ArrowStyle}
 `;
-
 const ArrowRight = styled(AiFillCaretRight)`
   ${ArrowStyle}
 `;
@@ -161,9 +148,7 @@ function Education({ slides }) {
 
   return (
     <ProjectSection id="projects">
-      <ProjectTitle>
-        <h2>Projects</h2>
-      </ProjectTitle>
+      <ProjectTitle>Projects</ProjectTitle>
       <ProjectWrapper
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { educationData } from "../data/EducationData";
-import styled, { css } from "styled-components";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import styled from "styled-components";
+import { StyledH2 } from "./titleStyles";
 
 const ExperienceSection = styled.section`
   position: relative;
@@ -22,18 +22,7 @@ const ExperienceSection = styled.section`
   }
 `;
 
-const ExperienceTitle = styled.div`
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 0.5rem;
-  text-align: center;
-  transition: transform 0.3s cubic-bezier(0.175, 0.85, 0.3, 1.275);
-
-  &:hover {
-    transform: scale(1.5);
-    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  }
-`;
+const ExperienceTitle = styled(StyledH2)``;
 
 const ExperienceObjects = styled.div``;
 
@@ -104,9 +93,7 @@ const ExperienceImage = styled.img`
 function Education() {
   return (
     <ExperienceSection id="education">
-      <ExperienceTitle>
-        <h2>Education</h2>
-      </ExperienceTitle>
+      <ExperienceTitle black>Education</ExperienceTitle>
       <ExperienceObjects>
         {educationData.map((item, index) => (
           <ExperienceObject key={index}>

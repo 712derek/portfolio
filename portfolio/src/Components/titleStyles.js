@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const TitleStyles = styled.h2`
+export const StyledH2 = styled.h2`
   display: flex;
   align-items: flex-start;
   color: ${(p) => (p.black ? "" : "#fff")};
@@ -15,5 +15,3 @@ const TitleStyles = styled.h2`
     text-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
   }
 `;
-
-export default TitleStyles;

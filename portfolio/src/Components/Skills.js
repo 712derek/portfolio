@@ -6,6 +6,7 @@ import {
   skillDataLanguages,
 } from "../data/SkillsData";
 import img from "../images/freyr.jpeg";
+import { StyledH2 } from "./titleStyles";
 
 const SkillsWrapper = styled.section`
   height: 100vh;
@@ -19,17 +20,7 @@ const SkillsWrapper = styled.section`
   background-position: 15% 10%;
 `;
 
-const SkillTitle = styled.div`
-  margin-bottom: 0.5rem;
-  text-align: center;
-  color: white;
-  transition: transform 0.3s cubic-bezier(0.175, 0.85, 0.3, 1.275);
-
-  &:hover {
-    transform: scale(1.5);
-    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  }
-`;
+const SkillTitle = styled(StyledH2)``;
 
 const ItemWrapper = styled.div`
   width: 70vw;
@@ -54,9 +45,7 @@ const SkillItems = styled.ul`
 const Skills = () => {
   return (
     <SkillsWrapper id="skills">
-      <SkillTitle>
-        <h2>Skills</h2>
-      </SkillTitle>
+      <SkillTitle>Skills</SkillTitle>
       <ItemWrapper>
         {skillDataWebDev.map((item, index) => (
           <SkillItems key={index}>{item.skill}</SkillItems>

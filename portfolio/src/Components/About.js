@@ -1,16 +1,14 @@
 import React from "react";
 import { aboutData } from "../data/AboutData";
-// import "../Style/About.css";
 import styled from "styled-components";
 import ImageOne from "../images/portrait.png";
-import TitleStyles from "./titleStyles";
+import { StyledH2 } from "./titleStyles";
 
 const AboutSection = styled.section`
   position: relative;
   height: 100vh;
   min-height: 500px;
   max-height: 1080px;
-  /* background: rgb(136, 136, 136); */
   background: rgb(211, 211, 211);
   background-size: cover !important;
   padding: 15px;
@@ -25,7 +23,7 @@ const AboutSection = styled.section`
   }
 `;
 
-const AboutTitle = styled(TitleStyles)``;
+const AboutTitle = styled(StyledH2)``;
 
 const AboutInfo = styled.div`
   display: flex;

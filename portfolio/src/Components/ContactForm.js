@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../firebase";
 import styled, { css } from "styled-components";
+import { StyledH2 } from "./titleStyles";
 
 const FormSection = styled.form`
   position: relative;
@@ -20,19 +21,7 @@ const FormSection = styled.form`
   }
 `;
 
-const FormTitle = styled.div`
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 0.5rem;
-  text-align: center;
-  color: white;
-  transition: transform 0.3s cubic-bezier(0.175, 0.85, 0.3, 1.275);
-
-  &:hover {
-    transform: scale(1.5);
-    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-  }
-`;
+const FormTitle = styled(StyledH2)``;
 
 const FormData = styled.div`
   display: flex;
@@ -155,9 +144,7 @@ const ContactForm = () => {
 
   return (
     <FormSection onSubmit={handleSubmit} id="contact">
-      <FormTitle>
-        <h2>Contact Me</h2>
-      </FormTitle>
+      <FormTitle>Contact Me</FormTitle>
       <FormData>
         <FormTop>
           <FormName
