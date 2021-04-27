@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { projectData } from "../data/ProjectData";
-import styled, { css, keyframes } from "styled-components";
+import styled, { css } from "styled-components";
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 
 const ProjectSection = styled.section`
@@ -37,7 +37,10 @@ const ProjectTitle = styled.div`
   }
 `;
 
-const ProjectWrapper = styled.div``;
+const ProjectWrapper = styled.div`
+  width: 80vw;
+  height: 50vh;
+`;
 
 const ProjectObject = styled.div`
   display: flex;
@@ -62,7 +65,8 @@ const ProjectText = styled.div`
 `;
 
 const ProjectImage = styled.img`
-  height: 400px;
+  max-height: 400px;
+  max-width: 600px;
   margin: 0 2rem;
   object-fit: cover;
   border-radius: 3px;
@@ -84,6 +88,7 @@ const ArrowStyle = css`
   height: 30px;
   border-radius: 50%;
   cursor: pointer;
+  color: #fff;
   transition: transform 0.3s cubic-bezier(0.175, 0.85, 0.3, 1.275);
 
   &:hover {
@@ -110,7 +115,7 @@ function Education({ slides }) {
     const nextSlide = () => {
       setCurrent((current) => (current === length - 1 ? 0 : current + 1));
     };
-    if (!isHovering) timeout.current = setTimeout(nextSlide, 1000);
+    if (!isHovering) timeout.current = setTimeout(nextSlide, 3000);
 
     return function () {
       if (timeout.current) {
@@ -179,8 +184,16 @@ function Education({ slides }) {
         ))}
       </ProjectWrapper>
       <ButtonWrapper>
-        <ArrowLeft onClick={prefSlide} />
-        <ArrowRight onClick={nextSlide} />
+        <ArrowLeft
+          onClick={prefSlide}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        />
+        <ArrowRight
+          onClick={nextSlide}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        />
       </ButtonWrapper>
     </ProjectSection>
   );
