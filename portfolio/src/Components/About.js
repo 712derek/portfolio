@@ -3,6 +3,7 @@ import { aboutData } from "../data/AboutData";
 // import "../Style/About.css";
 import styled from "styled-components";
 import ImageOne from "../images/portrait.png";
+import TitleStyles from "./titleStyles";
 
 const AboutSection = styled.section`
   position: relative;
@@ -24,20 +25,7 @@ const AboutSection = styled.section`
   }
 `;
 
-const AboutTitle = styled.div`
-  display: flex;
-  align-items: flex-start;
-  color: white;
-  padding: 0 1rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  transition: transform 0.3s cubic-bezier(0.175, 0.85, 0.3, 1.275);
-
-  &:hover {
-    transform: scale(1.5);
-    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
-  }
-`;
+const AboutTitle = styled(TitleStyles)``;
 
 const AboutInfo = styled.div`
   display: flex;
@@ -81,9 +69,7 @@ const AboutText = styled.p`
 function About() {
   return (
     <AboutSection id="about">
-      <AboutTitle>
-        <h2>About Me</h2>
-      </AboutTitle>
+      <AboutTitle>About Me</AboutTitle>
       <AboutInfo>
         <AboutImage src={ImageOne} atl="portrait" />
         <AboutText>
