@@ -1,6 +1,6 @@
 import ProjectImg1 from "../images/projects/portfolio.jpg";
-import IntImg01 from "../images/education/input_02.jpeg";
-import IntImg02 from "../images/88888.jpeg";
+import ProjectImg2 from "../images/projects/amazon_clone.jpg";
+import ProjectImg3 from "../images/projects/styled_comp.jpg";
 
 export const projectData = [
   {
@@ -12,21 +12,19 @@ export const projectData = [
     link: "",
   },
   {
-    title: "Input-01",
-    image: IntImg01,
-    year: "2015 - 2018",
+    title: "Amazon Clone",
+    image: ProjectImg2,
     text:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat amet nisi inventore incidunt modi, ipsa beatae in iste quis aliquid error ratione. Saepe ullam labore fuga culpa maiores minima error? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat amet nisi inventore incidunt modi, ipsa beatae in iste quis aliquid error ratione. Saepe ullam labore fuga culpa maiores minima error?",
-    skill: "HTML, CSS, JS, REACT, ES6",
+      "As an introduciton build websites using the React library I followed an online course to build a functioning Amazon clone.",
+    skill: "React, CSS, JS, ES6, Firebase",
     link: "",
   },
   {
-    title: "Interior / Spatial design",
-    image: IntImg02,
-    year: "2015 - 2018",
+    title: "React styled components - udemy",
+    image: ProjectImg3,
     text:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat amet nisi inventore incidunt modi, ipsa beatae in iste quis aliquid error ratione. Saepe ullam labore fuga culpa maiores minima error? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat amet nisi inventore incidunt modi, ipsa beatae in iste quis aliquid error ratione. Saepe ullam labore fuga culpa maiores minima error?",
-    skill: "HTML, CSS, JS, REACT, ES6",
+      '"Ditch CSS stylesheets! Learn CSS in JS to quickly and cleanly style React components with the styled components library." This extracurricular course I followed to get a better understanding of styled components',
+    skill: "React, Styled Components",
     link: "",
   },
 ];

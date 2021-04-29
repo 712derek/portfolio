@@ -5,7 +5,7 @@ import { StyledH2 } from "./titleStyles";
 
 const FormSection = styled.form`
   position: relative;
-  height: 75vh;
+  height: 80vh;
   background-size: cover !important;
   padding: 15px;
   overflow: hidden !important;
