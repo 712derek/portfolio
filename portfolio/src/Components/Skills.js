@@ -18,6 +18,12 @@ const SkillsWrapper = styled.section`
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: 15% 10%;
+
+  @media screen and (max-width: 768px) {
+    height: 100vh;
+    background-position-x: -750px;
+    background-position-y: bottom 10px;
+  }
 `;
 
 const SkillTitle = styled(StyledH2)``;
@@ -30,7 +36,7 @@ const ItemWrapper = styled.div`
 `;
 
 const SkillItems = styled.ul`
-  margin: 1rem 1rem;
+  margin: 0.5rem;
   padding: 1rem 2rem;
   border-radius: 3px;
   list-style: none;
@@ -40,6 +46,11 @@ const SkillItems = styled.ul`
   background: rgb(211, 211, 211);
   text-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+
+  @media screen and (max-width: 768px) {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
 `;
 
 const Skills = () => {
