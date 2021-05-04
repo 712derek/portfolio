@@ -25,6 +25,10 @@ const Nav = styled.nav`
   animation: ${appear} 0.5s ease-out;
   transition: all 0.5s ease-in-out;
   background: ${({ navbar }) => (navbar ? "rgba(211, 211, 211, 0.9)" : "")};
+
+  @media screen and (max-width: 768px) {
+    background: none;
+  }
 `;
 
 const NavLink = css`
@@ -46,6 +50,10 @@ const NavLink = css`
 const Logo = styled(Link)`
   ${NavLink};
   font-weight: 600;
+
+  @media screen and (max-width: 786px) {
+    display: none;
+  }
 `;
 
 const MenuBars = styled(AiOutlineMenu)`
@@ -54,6 +62,10 @@ const MenuBars = styled(AiOutlineMenu)`
   text-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 
   transition: transform 0.3s cubic-bezier(0.175, 0.85, 0.3, 1.275);
+
+  @media screen and (max-width: 768px) {
+    color: rgba(0, 0, 0, 0.9);
+  }
 
   &:hover {
     transform: scale(1.2);

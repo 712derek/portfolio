@@ -30,6 +30,15 @@ const Icon = styled.div`
 `;
 
 const CloseIcon = styled(AiOutlinePlus)`
+  display: block;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-left: 1rem;
+
   color: #fff;
   transform: rotate(45deg) scale(1.25);
   transition: transform 0.3s cubic-bezier(0.175, 0.85, 0.3, 1.275);
