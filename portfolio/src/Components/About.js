@@ -19,7 +19,7 @@ const AboutSection = styled.section`
   flex-direction: column;
 
   @media (max-width: 768px) {
-    height: 110vh;
+    height: 100%;
   }
 `;
 
@@ -30,7 +30,7 @@ const AboutInfo = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     img {
       margin-bottom: 1rem;
@@ -55,7 +55,7 @@ const AboutText = styled.p`
   text-align: left;
   width: 60%;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     text-align: justify;
   }
 

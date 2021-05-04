@@ -65,6 +65,7 @@ const MenuBars = styled(AiOutlineMenu)`
 
   @media screen and (max-width: 768px) {
     color: rgba(0, 0, 0, 0.9);
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   }
 
   &:hover {
