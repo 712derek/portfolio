@@ -27,7 +27,7 @@ const pulse = keyframes`
 const FooterSection = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 25vh;
+  height: 20vh;
   padding: 1rem 2rem;
   background: rgb(0, 0, 0);
 
@@ -42,38 +42,46 @@ const FooterSection = styled.div`
   }
 `;
 
-const SocialLinks = styled.div`
+const FooterInfo = styled.div`
+  margin: 2rem 2rem;
+  width: 300px;
+  color: #fff;
+  text-align: center;
+`;
+
+const LinkToTop = styled.i`
   display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 10;
+  bottom: 15px;
+  color: #fff;
   font-size: 2rem;
-  cursor: pointer;
-  color: white;
 
   svg {
-    margin-right: 0.5rem;
+    cursor: pointer;
+    animation: ${pulse} 1.5s linear infinite;
+
     &:hover {
-      color: rgba(96, 219, 249, 0.8);
+      color: rgba(96, 219, 249);
     }
   }
 `;
 
-const Phone = styled.div`
-  display: flex;
-  align-items: center;
-  p {
-    font-size: 1.2rem;
-  }
-`;
-
-const LinkToTop = styled(SocialLinks)`
-  color: white;
-  animation: ${pulse} 1.5s linear infinite;
-`;
-
 const Footer = () => (
   <FooterSection>
+    <FooterInfo>
+      <h6>Derek te Rijdt</h6>
+      <h6>Rue de Bosnie 56</h6>
+      <h6>1060, Saint-Gilles - Brussels</h6>
+    </FooterInfo>
     <LinkToTop>
       <IoIosArrowDropup onClick={() => scroll.scrollToTop()} />
     </LinkToTop>
+    <FooterInfo>
+      <h6>derekterijdt@gmail.com</h6>
+      <h6>+32 4 85 988001</h6>
+    </FooterInfo>
   </FooterSection>
 );
 
