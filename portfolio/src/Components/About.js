@@ -10,9 +10,9 @@ const AboutSection = styled.section`
   min-height: 500px;
   max-height: 1080px;
   background: rgb(211, 211, 211);
-  background-size: cover !important;
+  background-size: cover;
   padding: 15px;
-  overflow: hidden !important;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -18,7 +18,7 @@ const ExperienceSection = styled.section`
   justify-content: space-around;
 
   @media (max-width: 768px) {
-    height: 2000px;
+    height: 100%;
   }
 `;
 
@@ -36,7 +36,7 @@ const ExperienceObject = styled.div`
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -57,12 +57,15 @@ const ExperienceImage = styled.img`
   transition: transform 0.3s cubic-bezier(0.175, 0.85, 0.3, 1.275);
 
   &:hover {
-    transform: scale(1.5);
+    transform: scale(1.4);
     z-index: 999;
   }
   @media screen and (max-width: 768px) {
     margin: 0;
-    margin-bottom: 1rem;
+    height: 150px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 5%;
   }
 `;
 
