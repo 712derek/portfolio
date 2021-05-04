@@ -20,16 +20,13 @@ const ProjectSection = styled.section`
   background: rgb(211, 211, 211);
 
   @media (max-width: 768px) {
-    height: 100%;
+    height: 100vh;
   }
 `;
 
 const ProjectTitle = styled(StyledH2)``;
 
-const ProjectWrapper = styled.div`
-  width: 80vw;
-  height: 50vh;
-`;
+const ProjectWrapper = styled.div``;
 
 const ProjectObject = styled.div`
   display: flex;
@@ -63,7 +60,7 @@ const ProjectImage = styled.img`
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 
   @media screen and (max-width: 768px) {
-    margin: 0;
+    width: 90vw;
   }
 `;
 

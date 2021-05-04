@@ -65,8 +65,9 @@ const ExperienceText = styled.div`
 
   @media (max-width: 768px) {
     margin: 0;
+    padding: 0 1rem;
     text-align: justify;
-    width: 80%;
+    width: 80vw;
 
     border: 1px solid;
     border-image-slice: 1;
@@ -76,6 +77,9 @@ const ExperienceText = styled.div`
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0)
     );
+    h3 {
+      margin: 0;
+    }
   }
 `;
 
@@ -86,7 +90,11 @@ const ExperienceImage = styled.img`
   border-radius: 5px 0 0 5px;
 
   @media screen and (max-width: 768px) {
-    margin: 0;
+    margin-bottom: 1rem;
+    height: 200px;
+    width: 280px;
+    object-fit: cover;
+    border-radius: 5%;
   }
 `;
 
