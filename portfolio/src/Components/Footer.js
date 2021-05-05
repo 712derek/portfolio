@@ -26,7 +26,7 @@ const pulse = keyframes`
 
 const FooterSection = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   height: 20vh;
   padding: 1rem 2rem;
   background: rgb(0, 0, 0);
@@ -38,7 +38,6 @@ const FooterSection = styled.div`
   animation: ${appear} 0.3s ease-out;
 
   @media screen and (max-width: 768px) {
-    height: 120px;
   }
 `;
 

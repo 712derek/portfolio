@@ -64,7 +64,7 @@ function App() {
             <Education />
             <Skills />
             <ContactForm />
-            <Footer />
+            {/* <Footer /> */}
           </Router>
         </div>
       )}

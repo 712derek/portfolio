@@ -1,11 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { db } from "../firebase";
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { StyledH2 } from "./titleStyles";
+import { IoIosArrowDropup } from "react-icons/io";
+import { animateScroll as scroll } from "react-scroll";
+
+const appear = keyframes`
+  from{
+    transform: translateY(100%);
+  }
+  to{
+    transform: translateY(0%);
+  }
+`;
+
+const pulse = keyframes`
+  0%{
+    transform: scale(1);
+  }
+  40%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+`;
 
 const FormSection = styled.form`
   position: relative;
-  height: 80vh;
+  height: 100vh;
   background-size: cover !important;
   padding: 15px;
   overflow: hidden !important;
@@ -115,6 +138,25 @@ const FormButton = styled.button`
   }
 `;
 
+const LinkToTop = styled.i`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 10;
+  bottom: 15px;
+  color: #fff;
+  font-size: 2rem;
+
+  svg {
+    cursor: pointer;
+    animation: ${pulse} 1.5s linear infinite;
+
+    &:hover {
+      color: rgba(96, 219, 249);
+    }
+  }
+`;
+
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -181,6 +223,9 @@ const ContactForm = () => {
           </FormButton>
         </FormBottom>
       </FormData>
+      <LinkToTop>
+        <IoIosArrowDropup onClick={() => scroll.scrollToTop()} />
+      </LinkToTop>
     </FormSection>
   );
 };
