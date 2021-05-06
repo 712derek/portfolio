@@ -89,7 +89,7 @@ const ExperienceImage = styled.img`
   object-fit: cover;
   border-radius: 5px 0 0 5px;
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     margin-bottom: 1rem;
     height: 200px;
     width: 280px;

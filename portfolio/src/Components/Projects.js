@@ -20,7 +20,7 @@ const ProjectSection = styled.section`
   background: rgb(211, 211, 211);
 
   @media (max-width: 768px) {
-    height: 100vh;
+    height: 120vh;
   }
 `;
 
@@ -35,9 +35,11 @@ const ProjectObject = styled.div`
 
   @media (max-width: 768px) {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+
+    margin: 0;
   }
 `;
 
@@ -49,6 +51,29 @@ const ProjectText = styled.div`
   width: 300px;
   max-height: 400px;
   color: white;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    transition: color 0.3s;
+  }
+  a:hover {
+    color: rgba(96, 219, 249, 0.8);
+  }
+
+  @media (max-width: 768px) {
+    text-align: justify;
+    overflow: scroll;
+    width: 90vw;
+
+    h3,
+    a {
+      text-align: center;
+    }
+  }
 `;
 
 const ProjectImage = styled.img`
@@ -59,8 +84,9 @@ const ProjectImage = styled.img`
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 
-  @media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
     width: 90vw;
+    align-items: flex-start;
   }
 `;
 
@@ -159,6 +185,9 @@ function Education({ slides }) {
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>
                   <p>{item.skill}</p>
+                  <a href={item.link} target="_blank">
+                    <p>Link to {item.page}</p>
+                  </a>
                 </ProjectText>
                 <ProjectImage src={item.image} />
               </>
