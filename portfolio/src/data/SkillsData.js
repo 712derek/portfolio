@@ -3,6 +3,7 @@ export const skillDataWebDev = [
   { skill: "CSS" },
   { skill: "JavaScript" },
   { skill: "React" },
+  { skill: "React-Native" },
   { skill: "Styled Components" },
   { skill: "Git" },
   { skill: "Node.js" },

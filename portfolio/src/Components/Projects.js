@@ -24,7 +24,12 @@ const ProjectSection = styled.section`
   }
 `;
 
-const ProjectTitle = styled(StyledH2)``;
+const ProjectTitle = styled(StyledH2)`
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 10vw;
+  }
+`;
 
 const ProjectWrapper = styled.div``;
 
@@ -68,6 +73,8 @@ const ProjectText = styled.div`
     text-align: justify;
     overflow: scroll;
     width: 90vw;
+    position: absolute;
+    top: 95vw;
 
     h3,
     a {
@@ -85,8 +92,11 @@ const ProjectImage = styled.img`
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 
   @media (max-width: 768px) {
-    width: 90vw;
+    width: 100vw;
+    border-radius: 0;
     align-items: flex-start;
+    position: absolute;
+    top: 25vw;
   }
 `;
 
@@ -94,6 +104,11 @@ const ButtonWrapper = styled.div`
   width: 75%;
   display: flex;
   justify-content: space-around;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    bottom: 2vh;
+  }
 `;
 
 const ArrowStyle = css`

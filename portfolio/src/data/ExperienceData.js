@@ -8,23 +8,20 @@ export const experienceData = [
     location: "Institute for European Studies, VUB, Brussels",
     image: ImageEvent,
     year: "2019 - 2020",
-    text:
-      "Responsible for organizing academic events, lectures, graduation ceremonies and board meetings.",
+    text: "Responsible for organizing academic events, lectures, graduation ceremonies and board meetings.",
   },
   {
     title: "Internship",
     location: "Office 88888, Brussels",
     image: ImageIntern,
     year: "2017",
-    text:
-      "Internship at a small organization specialized in installation art, scenography and architecture.",
+    text: "Internship at a Brussels based organization specialized in scenography, installation art and architecture.",
   },
   {
     title: "Contact Agent",
     location: "DUO Ministry of Education, Culture & Science",
     image: ImageDuo,
     year: "2014 - 2015",
-    text:
-      "Informing and advizing students on college tuition, their rights, loans and refunds",
+    text: "Informing and advizing students on college tuition, their rights, loans and refunds",
   },
 ];

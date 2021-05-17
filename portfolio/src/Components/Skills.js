@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import {
   skillDataWebDev,
   skillDataTools,
@@ -56,7 +56,7 @@ const SkillItems = styled.ul`
 const Skills = () => {
   return (
     <SkillsWrapper id="skills">
-      <SkillTitle>Skills</SkillTitle>
+      {/* <SkillTitle>Skills</SkillTitle> */}
       <ItemWrapper>
         {skillDataWebDev.map((item, index) => (
           <SkillItems key={index}>{item.skill}</SkillItems>

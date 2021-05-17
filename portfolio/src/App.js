@@ -8,12 +8,12 @@ import Experience from "./Components/Experience";
 import GlobalStyle from "./globalStyles";
 import Dropdown from "./Components/Dropdown";
 import Education from "./Components/Education";
-import Footer from "./Components/Footer";
 import SocialBar from "./Components/SocialBar";
 import { projectData } from "./data/ProjectData";
 import ContactForm from "./Components/ContactForm";
 import Spinner from "./Components/Spinner";
 import Skills from "./Components/Skills";
+import ScrollSnap from "scroll-snap";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +27,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 2000);
   }, []);
 
   return (
@@ -48,7 +48,6 @@ function App() {
             <Education />
             <Skills />
             <ContactForm />
-            {/* <Footer /> */}
           </Router>
         </div>
       )}
