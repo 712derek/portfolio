@@ -20,14 +20,14 @@ const ProjectSection = styled.section`
   background: rgb(211, 211, 211);
 
   @media (max-width: 768px) {
-    height: 120vh;
+    height: 100vh;
   }
 `;
 
 const ProjectTitle = styled(StyledH2)`
   @media (max-width: 768px) {
     position: absolute;
-    top: 10vw;
+    top: 5vh;
   }
 `;
 
@@ -74,7 +74,7 @@ const ProjectText = styled.div`
     overflow: scroll;
     width: 90vw;
     position: absolute;
-    top: 95vw;
+    top: 50vh;
 
     h3,
     a {
@@ -96,7 +96,7 @@ const ProjectImage = styled.img`
     border-radius: 0;
     align-items: flex-start;
     position: absolute;
-    top: 25vw;
+    top: 12vh;
   }
 `;
 
@@ -107,7 +107,7 @@ const ButtonWrapper = styled.div`
 
   @media (max-width: 768px) {
     position: absolute;
-    bottom: 2vh;
+    bottom: 1vh;
   }
 `;
 
