@@ -27,7 +27,7 @@ const ProjectSection = styled.section`
 const ProjectTitle = styled(StyledH2)`
   @media (max-width: 768px) {
     position: absolute;
-    top: 5vh;
+    top: 3vh;
   }
 `;
 
@@ -74,7 +74,7 @@ const ProjectText = styled.div`
     overflow: scroll;
     width: 90vw;
     position: absolute;
-    top: 50vh;
+    top: 52vh;
 
     h3,
     a {
@@ -96,7 +96,7 @@ const ProjectImage = styled.img`
     border-radius: 0;
     align-items: flex-start;
     position: absolute;
-    top: 12vh;
+    top: 15vh;
   }
 `;
 
@@ -107,7 +107,7 @@ const ButtonWrapper = styled.div`
 
   @media (max-width: 768px) {
     position: absolute;
-    bottom: 1vh;
+    top: 8vh;
   }
 `;
 
