@@ -1,24 +1,20 @@
-import WebDevtImg01 from "../images/lead_bg2.jpeg";
-import IntImg01 from "../images/education/input_02.jpeg";
-import IntImg02 from "../images/education/onderzoek.jpeg";
-import IntImg03 from "../images/education/chair_for_2.jpeg";
+import IntImg01 from "../images/lead_bg2.jpeg";
+import IntImg02 from "../images/education/input_02.jpeg";
 
 export const educationData = [
   {
     title: "Front-end developer",
-    image: WebDevtImg01,
+    image: IntImg01,
     year: "2021",
-    text:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat amet nisi inventore incidunt modi, ipsa beatae in iste quis aliquid error ratione. Saepe ullam labore fuga culpa maiores minima error?",
+    text: "At the end of January 2021 I started a Front-end developer course provided by Intec Brussels. During this course I got to learn to code in HTML, CSS and JS. After having been thought these basics, we moved on to work with the React library",
     location: "Intec, Brussels",
     degree: "Ongoing programme, expected July 2021",
   },
   {
     title: "Interior / Spatial design",
-    image: IntImg01,
+    image: IntImg02,
     year: "2015 - 2018",
-    text:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat amet nisi inventore incidunt modi, ipsa beatae in iste quis aliquid error ratione. Saepe ullam labore fuga culpa maiores minima error? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat amet nisi inventore incidunt modi, ipsa beatae in iste quis aliquid error ratione. Saepe ullam labore fuga culpa maiores minima error?",
+    text: "When I moved to Brussels in 2015, I started the bachelor Interior Design at LUCA School of Arts. During my bachelor my main focus was spatial design and installation art. Several of my works got nominated for the end-of-the-years presentations and one for the Kortrijk Biennale. In 2018 I graduated with distinction.",
     location: "LUCA School of Arts, Brussels",
     degree: "B.A. with distinction",
   },
