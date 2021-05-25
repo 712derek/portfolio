@@ -13,7 +13,6 @@ import { projectData } from "./data/ProjectData";
 import ContactForm from "./Components/ContactForm";
 import Spinner from "./Components/Spinner";
 import Skills from "./Components/Skills";
-import ScrollSnap from "scroll-snap";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);

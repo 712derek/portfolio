@@ -11,7 +11,17 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     scroll-snap-type: y mandatory;
     overflow: scroll;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   }
+
+  code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
 
   h3 {
     margin: 1rem 0;

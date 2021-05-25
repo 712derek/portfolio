@@ -111,6 +111,7 @@ const FormTextarea = styled.textarea`
   width: 608px;
   height: 120px;
   margin-bottom: 0.5rem;
+  font-family: sans-serif;
 
   @media (max-width: 768px) {
     margin-top: -0.5rem;
@@ -205,7 +206,7 @@ const ContactForm = () => {
         </FormTop>
         <FormBottom>
           <FormTextarea
-            placeholder="Message"
+            placeholder="Write your message here..."
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
