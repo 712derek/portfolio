@@ -5,15 +5,6 @@ import { StyledH2 } from "./titleStyles";
 import { IoIosArrowDropup } from "react-icons/io";
 import { animateScroll as scroll } from "react-scroll";
 
-const appear = keyframes`
-  from{
-    transform: translateY(100%);
-  }
-  to{
-    transform: translateY(0%);
-  }
-`;
-
 const pulse = keyframes`
   0%{
     transform: scale(1);
@@ -40,7 +31,7 @@ const FormSection = styled.form`
   background: rgb(211, 211, 211);
 
   @media (max-width: 768px) {
-    height: cacl(100% + 10vh);
+    height: 100vh;
   }
 `;
 
@@ -111,7 +102,7 @@ const FormTextarea = styled.textarea`
   width: 608px;
   height: 120px;
   margin-bottom: 0.5rem;
-  font-family: sans-serif;
+  font-family: inherit;
 
   @media (max-width: 768px) {
     margin-top: -0.5rem;

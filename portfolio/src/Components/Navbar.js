@@ -88,7 +88,6 @@ const MenuBars = styled(AiOutlineMenu)`
 const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  margin-right: -2rem;
 
   @media screen and (max-width: 786px) {
     display: none;
@@ -115,7 +114,7 @@ const Navbar = ({ toggle }) => {
 
   return (
     <Nav navbar={navbar}>
-      <Logo onClick={() => scroll.scrollToTop()}>Derek te Rijdt</Logo>
+      <Logo onClick={() => scroll.scrollToTop()}>Home</Logo>
       <MenuBars onClick={toggle} />
       <NavMenu>
         {navbarData.map((item, index) => (
