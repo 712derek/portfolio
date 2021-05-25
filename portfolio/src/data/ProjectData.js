@@ -1,6 +1,7 @@
 import ProjectImg1 from "../images/projects/portfolio.jpg";
 import ProjectImg2 from "../images/projects/amazon_clone.jpg";
 import ProjectImg3 from "../images/projects/styled_comp.jpg";
+import ProjectImg4 from "../images/projects/rn_guess_a_number.jpg";
 
 export const projectData = [
   {
@@ -29,7 +30,7 @@ export const projectData = [
   },
   {
     title: "React Native - The Practical Guide [2021 Edition] - udemy",
-    image: ProjectImg3,
+    image: ProjectImg4,
     text: '"Use React Native and your React knowledge to build native iOS and Android Apps - incl. Push Notifications, Hooks, Redux" As an extra curricular course I started this React-Native course to get a basic understanding of this library.',
     skill: "React-Native, Hooks, Redux",
     link: "https://github.com/712derek/rn-guess-a-number",

@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { projectData } from "../data/ProjectData";
-import styled, { css } from "styled-components";
-import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
+import styled from "styled-components";
 import { StyledH2 } from "./titleStyles";
 
 const ProjectSection = styled.section`
