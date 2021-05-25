@@ -100,7 +100,7 @@ const ProjectImage = styled.img`
   }
 `;
 
-const ButtonWrapper = styled.div`
+const ButtonsWrapper = styled.div`
   width: 75%;
   display: flex;
   justify-content: space-around;
@@ -111,9 +111,10 @@ const ButtonWrapper = styled.div`
   }
 `;
 
-const ArrowStyle = css`
-  width: 30px;
-  height: 30px;
+const ArrowText = styled.p`
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.15em;
   border-radius: 50%;
   cursor: pointer;
   color: #fff;
@@ -123,12 +124,6 @@ const ArrowStyle = css`
     transform: scale(1.5);
     color: rgba(96, 219, 249, 0.8);
   }
-`;
-const ArrowLeft = styled(AiFillCaretLeft)`
-  ${ArrowStyle}
-`;
-const ArrowRight = styled(AiFillCaretRight)`
-  ${ArrowStyle}
 `;
 
 function Education({ slides }) {
@@ -210,18 +205,22 @@ function Education({ slides }) {
           </ProjectObject>
         ))}
       </ProjectWrapper>
-      <ButtonWrapper>
-        <ArrowLeft
+      <ButtonsWrapper>
+        <ArrowText
           onClick={prefSlide}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-        />
-        <ArrowRight
+        >
+          ᐊ PREVIOUS
+        </ArrowText>
+        <ArrowText
           onClick={nextSlide}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-        />
-      </ButtonWrapper>
+        >
+          NEXT ᐅ
+        </ArrowText>
+      </ButtonsWrapper>
     </ProjectSection>
   );
 }
