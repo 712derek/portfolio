@@ -22,6 +22,6 @@ export const experienceData = [
     location: "DUO Ministry of Education, Culture & Science",
     image: ImageDuo,
     year: "2014 - 2015",
-    text: "Informing and advising students on college tuition, their rights, loans and refunds",
+    text: "Informing and advising students on college tuition, their rights, loans and refunds.",
   },
 ];
