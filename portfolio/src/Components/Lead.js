@@ -120,7 +120,7 @@ const Lead = () => {
   return (
     <LeadSection>
       <LeadContent>
-        <h1>Derek te Rijdt</h1>
+        <h1>712_Derek</h1>
         <h2>React Developer</h2>
         <a href={cv} target="_blank">
           <Button />

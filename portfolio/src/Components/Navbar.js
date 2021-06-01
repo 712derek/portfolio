@@ -114,7 +114,7 @@ const Navbar = ({ toggle }) => {
 
   return (
     <Nav navbar={navbar}>
-      <Logo onClick={() => scroll.scrollToTop()}>Home</Logo>
+      <Logo onClick={() => scroll.scrollToTop()}>712</Logo>
       <MenuBars onClick={toggle} />
       <NavMenu>
         {navbarData.map((item, index) => (
