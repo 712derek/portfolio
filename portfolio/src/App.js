@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Navbar from "./Components/Navbar";
 import Lead from "./Components/Lead";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -11,45 +11,30 @@ import Education from "./Components/Education";
 import SocialBar from "./Components/SocialBar";
 import { projectData } from "./data/ProjectData";
 import ContactForm from "./Components/ContactForm";
-import Spinner from "./Components/Spinner";
 import Skills from "./Components/Skills";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   const toggle = () => {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 1500);
-  }, []);
-
   return (
     <>
-      {loading ? (
-        <Spinner />
-      ) : (
-        <div className="App">
-          <GlobalStyle />
-          <Router>
-            <Navbar toggle={toggle} />
-            <Dropdown isOpen={isOpen} toggle={toggle} />
-            <Lead />
-            <SocialBar />
-            <About component={About} />
-            <Experience />
-            <Projects slides={projectData} />
-            <Education />
-            <Skills />
-            <ContactForm />
-          </Router>
-        </div>
-      )}
+      <GlobalStyle />
+      <Router>
+        <Navbar toggle={toggle} />
+        <Dropdown isOpen={isOpen} toggle={toggle} />
+        <Lead />
+        <SocialBar />
+        <About component={About} />
+        <Experience />
+        <Projects slides={projectData} />
+        <Education />
+        <Skills />
+        <ContactForm />
+      </Router>
     </>
   );
 }
